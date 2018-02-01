@@ -1,22 +1,16 @@
 package org.topjava.training.web;
 
-import org.topjava.training.LoggerWrapper;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class UserServlet extends HttpServlet {
-
-    //private static final LoggerWrapper LOG = LoggerWrapper.get(UserServlet.class);
+public class MealServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //LOG.debug("redirect to userList");
-        resp.sendRedirect("userList.jsp");
-        req.getRequestDispatcher("/userList.jsp").forward(req, resp);
+        super.doGet(req, resp);
     }
 
     @Override
@@ -24,3 +18,4 @@ public class UserServlet extends HttpServlet {
         super.doPost(req, resp);
     }
 }
+
